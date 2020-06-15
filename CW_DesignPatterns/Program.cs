@@ -1,4 +1,5 @@
-﻿using CW_DesignPatterns.Warehouse;
+﻿using CW_DesignPatterns.Store;
+using CW_DesignPatterns.Warehouse;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,14 @@ namespace CW_DesignPatterns
 	{
 		static void Main(string[] args)
 		{
+			FoodWarehouse warehouse = new FoodWarehouse(new BaseWarehouse());
 			Food food = new Food("ADGDGDAREQ", "Abc", 53);
+			warehouse.AddProduct(new Food("AAA", "AAA", 40));
 
-			StoreWarehouse warehouse = new StoreWarehouse(new BaseWarehouse());
+			Shop store = new Shop();
+			IWarehouse storeAdapter = new ShopAdapter(store);
+
+			storeAdapter.AddProduct(new Food("FADF", "EEE", 3441));
 		}
 	}
 }

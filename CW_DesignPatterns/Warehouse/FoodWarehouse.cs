@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace CW_DesignPatterns.Warehouse
 {
-	public class StoreWarehouse
+	public class FoodWarehouse
 	{
-		private List<Product> inventory;
 		private IWarehouse warehouse;
-		public StoreWarehouse(IWarehouse warehouse)
+		public FoodWarehouse(IWarehouse warehouse)
 		{
 			this.warehouse = warehouse;
 		}

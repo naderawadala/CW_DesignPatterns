@@ -46,11 +46,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Product\Food.cs" />
+    <Compile Include="Store\Shop.cs" />
+    <Compile Include="Store\IShop.cs" />
+    <Compile Include="Store\ShopAdapter.cs" />
     <Compile Include="Warehouse\IWarehouse.cs" />
     <Compile Include="Product\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Warehouse\StoreWarehouse.cs" />
+    <Compile Include="Warehouse\FoodWarehouse.cs" />
     <Compile Include="Warehouse\BaseWarehouse.cs" />
   </ItemGroup>
   <ItemGroup>
