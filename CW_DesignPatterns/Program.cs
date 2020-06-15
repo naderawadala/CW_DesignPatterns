@@ -13,13 +13,15 @@ namespace CW_DesignPatterns
 		static void Main(string[] args)
 		{
 			FoodWarehouse warehouse = new FoodWarehouse(new BaseWarehouse());
-			Food food = new Food("ADGDGDAREQ", "Abc", 53);
+			warehouse.AddProduct(new Food("ADGDGDAREQ", "Abc", 53));
 			warehouse.AddProduct(new Food("AAA", "AAA", 40));
+			warehouse.PrintProducts();
 
 			Shop store = new Shop();
 			IWarehouse storeAdapter = new ShopAdapter(store);
 
 			storeAdapter.AddProduct(new Food("FADF", "EEE", 3441));
+			storeAdapter.PrintProducts();
 		}
 	}
 }

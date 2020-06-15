@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CW_DesignPatterns.Store
 {
-	public class Shop : IShop
+	public class Shop
 	{
 		private List<Product> productsOnShelf;
 		public Shop()
@@ -47,6 +47,13 @@ namespace CW_DesignPatterns.Store
 			if (product == LocateProduct(product.BARCODE))
 			{
 				productsOnShelf.Remove(product);
+			}
+		}
+		public void PrintProducts()
+		{
+			for (int i = 0; i < productsOnShelf.Count(); i++)
+			{
+				Console.WriteLine(productsOnShelf.ElementAt(i));
 			}
 		}
 	}

@@ -46,9 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Product\Food.cs" />
-    <Compile Include="Store\Shop.cs" />
-    <Compile Include="Store\IShop.cs" />
-    <Compile Include="Store\ShopAdapter.cs" />
+    <Compile Include="Shop\Shop.cs" />
+    <Compile Include="Shop\ShopAdapter.cs" />
     <Compile Include="Warehouse\IWarehouse.cs" />
     <Compile Include="Product\Product.cs" />
     <Compile Include="Program.cs" />

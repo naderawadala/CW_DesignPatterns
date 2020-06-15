@@ -38,5 +38,9 @@ namespace CW_DesignPatterns.Warehouse
 		{
 			warehouse.RemoveProduct(product);
 		}
+		public void PrintProducts()
+		{
+			warehouse.PrintProducts();
+		}
 	}
 }

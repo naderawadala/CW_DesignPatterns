@@ -18,6 +18,9 @@ namespace CW_DesignPatterns
 			this.Name = Name;
 			this.Price = Price;
 		}
-
+		public override string ToString()
+		{
+			return "Product name: " + Name + "Product price: " + Price + "Product barcode: " + BARCODE;
+		}
 	}
 }

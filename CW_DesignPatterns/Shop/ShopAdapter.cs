@@ -8,8 +8,8 @@ namespace CW_DesignPatterns.Store
 {
 	public class ShopAdapter : IWarehouse
 	{
-		IShop shop;
-		public ShopAdapter(IShop shop)
+		private Shop shop;
+		public ShopAdapter(Shop shop)
 		{
 			this.shop = shop;
 		}
@@ -31,6 +31,11 @@ namespace CW_DesignPatterns.Store
 		public List<Product> GetProducts()
 		{
 			return shop.CheckAllProducts();
+		}
+
+		public void PrintProducts()
+		{
+			shop.PrintProducts();
 		}
 
 		public void RemoveProduct(Product product)

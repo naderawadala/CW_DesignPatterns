@@ -42,6 +42,14 @@ namespace CW_DesignPatterns.Warehouse
 			return inventory;
 		}
 
+		public void PrintProducts()
+		{
+			for(int i = 0; i < inventory.Count(); i++)
+			{
+				Console.WriteLine(inventory.ElementAt(i));
+			}
+		}
+
 		public void RemoveProduct(Product product)
 		{
 			if (product == FindProduct(product.BARCODE))

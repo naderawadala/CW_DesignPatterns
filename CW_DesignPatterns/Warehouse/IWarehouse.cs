@@ -13,5 +13,6 @@ namespace CW_DesignPatterns
 		Product FindProduct(String BARCODE);
 		void EditProduct(Product oldProduct, Product newProduct);
 		void RemoveProduct(Product product);
+		void PrintProducts();
 	}
 }
