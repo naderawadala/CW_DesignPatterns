@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,6 @@ namespace CW_DesignPatterns
 		void EditProduct(Product oldProduct, Product newProduct);
 		void RemoveProduct(Product product);
 		void PrintProducts();
+		
 	}
 }

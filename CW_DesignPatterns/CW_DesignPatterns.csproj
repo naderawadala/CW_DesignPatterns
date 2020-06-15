@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Iterator\FoodIterator.cs" />
+    <Compile Include="Iterator\ObjectIterator.cs" />
+    <Compile Include="Iterator\IteratorAggregate.cs" />
     <Compile Include="Product\Food.cs" />
     <Compile Include="Shop\Shop.cs" />
     <Compile Include="Shop\ShopAdapter.cs" />

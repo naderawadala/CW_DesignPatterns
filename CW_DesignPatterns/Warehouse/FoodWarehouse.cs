@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CW_DesignPatterns.Iterator;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CW_DesignPatterns.Warehouse
 {
-	public class FoodWarehouse
+	public class FoodWarehouse: IteratorAggregate
 	{
 		private IWarehouse warehouse;
 		public FoodWarehouse(IWarehouse warehouse)
@@ -41,6 +43,10 @@ namespace CW_DesignPatterns.Warehouse
 		public void PrintProducts()
 		{
 			warehouse.PrintProducts();
+		}
+		public override IEnumerator GetEnumerator()
+		{
+			return new FoodIterator(this);
 		}
 	}
 }

@@ -12,16 +12,25 @@ namespace CW_DesignPatterns
 	{
 		static void Main(string[] args)
 		{
-			FoodWarehouse warehouse = new FoodWarehouse(new BaseWarehouse());
+			// dependency injection 
+			var warehouse = new FoodWarehouse(new BaseWarehouse());
 			warehouse.AddProduct(new Food("ADGDGDAREQ", "Abc", 53));
 			warehouse.AddProduct(new Food("AAA", "AAA", 40));
 			warehouse.PrintProducts();
 
+			// adapter
 			Shop store = new Shop();
 			IWarehouse storeAdapter = new ShopAdapter(store);
 
 			storeAdapter.AddProduct(new Food("FADF", "EEE", 3441));
 			storeAdapter.PrintProducts();
+
+			// iterator 
+			foreach (var element in warehouse)
+			{
+				Console.WriteLine(element);
+			}
+
 		}
 	}
 }
